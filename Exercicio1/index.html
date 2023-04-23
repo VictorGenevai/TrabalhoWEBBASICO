@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário WEB</title>
+
+    <style>
+		body {
+			background-color: white;
+			color: black;
+		}
+		.claro {
+			background-color: white;
+			color: black;
+		}
+		.preto {
+			background-color: black;
+			color: white;
+		}
+		.vermelho {
+			background-color: red;
+			color: black;
+		}
+		.rosa {
+			background-color: pink;
+			color: black;
+		}
+	</style>
+</head>
+<body>
+	<h1>Formulário WEB</h1>
+	<form>
+		<label for="nome">Nome:</label>
+		<input type="text" id="nome" name="nome"><br><br>
+		
+		<label for="email">E-mail:</label>
+		<input type="email" id="email" name="email"><br><br>
+		
+		<label for="idade">Idade:</label>
+		<input type="number" id="idade" name="idade"><br><br>
+		
+		<label for="endereco">Endereço:</label>
+		<input type="text" id="endereco" name="endereco"><br><br>
+
+		<label for="tema">Tema:</label>
+			<select id="tema" name="tema" onchange="mudarTema()">
+				<option value="claro">Claro</option>
+				<option value="preto">Preto</option>
+				<option value="vermelho">Verm</option>
+				<option value="rosa">Rosa</option>
+			</select>
+		<br><br>
+		
+		<input type="submit" value="Enviar">
+	</form>
+	
+	<script>
+		function mudarTema() {
+			var tema = document.getElementById("tema").value;
+			document.body.className = tema;
+		}
+	</script>
+</body>
+</html>
